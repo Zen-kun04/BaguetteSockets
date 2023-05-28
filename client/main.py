@@ -1,4 +1,3 @@
-import baguette_client_sockets as bcs
 from baguette_client_sockets import BaguetteClientSockets
 from events import event
 
@@ -10,7 +9,7 @@ def on_connection_success():
 @event("message")
 def on_message(message):
     print("Mensaje:", message)
-    s.send_message("Hola bro")
+    s.send_message("Hola bro soy el cliente")
 
 @event("error")
 def on_error(err):
